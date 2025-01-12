@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydantic-sqlalchemy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydantic-sqlalchemy-{{ version }}.tar.gz
   sha256: 82035d4b3f8019b2e3f070b7ce3f764a30ada03b632c1b5df54dd4c49438de6a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.6,<4.0
+    - python >={{ python_min }},<4.0
     - sqlalchemy >=1.3.16,<2.0.0
     - pydantic >=1.5.1
 
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tiangolo/pydantic-sqlalchemy
