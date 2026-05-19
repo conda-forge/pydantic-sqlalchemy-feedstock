@@ -1,18 +1,18 @@
 {% set name = "pydantic-sqlalchemy" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pydantic-sqlalchemy-{{ version }}.tar.gz
-  sha256: 82035d4b3f8019b2e3f070b7ce3f764a30ada03b632c1b5df54dd4c49438de6a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 4f44afbe6e38d601d325a8f74d9b9a0d3922634570378701e16019afa62f48a3
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
