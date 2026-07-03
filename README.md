@@ -148,5 +148,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@REPLACE_MAINTAINER](https://github.com/REPLACE_MAINTAINER/)
+* [@rxm7706](https://github.com/rxm7706/)
 
