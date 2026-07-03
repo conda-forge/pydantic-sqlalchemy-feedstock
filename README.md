@@ -9,6 +9,10 @@ Package license: MIT
 
 Summary: Tools to convert SQLAlchemy models to Pydantic models
 
+Development: https://github.com/tiangolo/pydantic-sqlalchemy
+
+Tools to convert SQLAlchemy models to Pydantic models
+
 Current build status
 ====================
 
@@ -144,5 +148,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@rxm7706](https://github.com/rxm7706/)
+* [@REPLACE_MAINTAINER](https://github.com/REPLACE_MAINTAINER/)
 
